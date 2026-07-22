@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/design-pack.schema.json",
+  "schema_version": "1.0",
+  "id": "TODO-pack-id",
+  "name": "TODO Pack Name",
+  "version": "0.1.0",
+  "summary": "TODO Explain the bounded professional scenarios and decisions this pack supports.",
+  "domain": "TODO domain",
+  "risk_level": "moderate",
+  "density": "adaptive",
+  "surfaces": ["web"],
+  "audiences": ["TODO role"],
+  "locales": ["en"],
+  "accessibility_target": "WCAG 2.2 AA",
+  "required_documents": ["README.md", "DESIGN.md", "DOMAIN.md", "FLOWS.md", "STATES.md", "PERMISSIONS.md", "COMPLIANCE.md", "CONTENT.md"],
+  "coverage": {
+    "scenarios": ["TODO-scenario-one", "TODO-scenario-two"],
+    "states": ["loading", "empty", "error", "permission-denied", "stale-or-partial", "offline-or-reconnecting"]
+  },
+  "provenance": [{
+    "source_type": "recommendation",
+    "title": "TODO Source title",
+    "url": "https://example.com/source",
+    "reviewed_at": "2026-01-01",
+    "confidence": "medium"
+  }]
+}

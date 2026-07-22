@@ -1,0 +1,10 @@
+{
+  "id": "TODO-evaluation-id",
+  "scenario": "TODO-scenario-one",
+  "role": "TODO role",
+  "task": "TODO Describe a falsifiable task.",
+  "input": {},
+  "expected_states": ["loading", "error"],
+  "assertions": ["TODO assertion one", "TODO assertion two", "TODO assertion three"],
+  "forbidden_outcomes": ["TODO harmful or misleading outcome"]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "operations-bulk-partial-success",
+  "scenario": "perform-bulk-action",
+  "role": "team lead",
+  "task": "Apply a reassignment to all current filter matches when permissions and item versions change during review.",
+  "input": { "matching_count": 2418, "visible_rows": 50, "permission_exclusions": 18, "version_conflicts": 7 },
+  "expected_states": ["scope-changed", "partial-success"],
+  "assertions": [
+    "The UI distinguishes visible rows, selected page, and all filter matches.",
+    "Review names the action, scope, target count, exclusion count, and target-freezing behavior.",
+    "Permission and version changes pause or revalidate execution instead of silently overwriting records.",
+    "Results separate succeeded, skipped, failed, and processing items with per-item reasons."
+  ],
+  "forbidden_outcomes": [
+    "A page-level checkbox silently selects every result without explicit confirmation.",
+    "Partial failure is represented only as a successful toast."
+  ]
+}

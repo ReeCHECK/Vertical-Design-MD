@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/design-pack.schema.json",
+  "schema_version": "1.0",
+  "id": "fintech-trading",
+  "name": "Fintech Trading Workspace",
+  "version": "1.0.0",
+  "summary": "A high-density, risk-aware workspace for reviewing market data, submitting orders, and monitoring positions without hiding uncertainty.",
+  "domain": "capital-markets trading operations",
+  "risk_level": "high",
+  "density": "compact",
+  "surfaces": ["web", "desktop"],
+  "audiences": ["trader", "risk analyst", "operations reviewer", "read-only observer"],
+  "locales": ["en", "zh-CN"],
+  "accessibility_target": "WCAG 2.2 AA",
+  "required_documents": ["README.md", "DESIGN.md", "DOMAIN.md", "FLOWS.md", "STATES.md", "PERMISSIONS.md", "COMPLIANCE.md", "CONTENT.md"],
+  "coverage": {
+    "scenarios": ["review-market-and-submit-order", "amend-or-cancel-order", "monitor-position-risk"],
+    "states": ["loading", "empty", "error", "permission-denied", "stale-or-partial", "offline-or-reconnecting", "submission-uncertain", "market-closed"]
+  },
+  "provenance": [
+    {
+      "source_type": "primary",
+      "title": "WCAG 2.2 Target Size Minimum",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "reviewed_at": "2026-07-22",
+      "confidence": "high"
+    },
+    {
+      "source_type": "recommendation",
+      "title": "Vertical Design MD trading interaction recommendations",
+      "url": "https://github.com/ReeCHECK/Vertical-Design-MD/blob/main/docs/specification.md",
+      "reviewed_at": "2026-07-22",
+      "confidence": "medium"
+    }
+  ]
+}

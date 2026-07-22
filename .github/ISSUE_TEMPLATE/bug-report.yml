@@ -1,0 +1,42 @@
+name: Incorrect or broken guidance
+description: Report a validator defect, broken documentation, or potentially unsafe recommendation.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [Specification, Validator, Preview, Fintech pack, Healthcare pack, Enterprise operations pack, Documentation]
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is incorrect, unsafe, ambiguous, or broken?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or reproduction
+      description: Include commands, output, primary sources, and review dates when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential impact
+      description: Explain who could be affected and how severe the error may be.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and discussions.
+          required: true
+        - label: I removed sensitive or proprietary information.
+          required: true

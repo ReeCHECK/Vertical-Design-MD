@@ -1,0 +1,49 @@
+name: New vertical pack proposal
+description: Propose a bounded professional scenario before implementation.
+title: "[Pack]: "
+labels: ["pack-proposal", "needs-domain-review"]
+body:
+  - type: input
+    id: scenario
+    attributes:
+      label: Bounded scenario
+      description: Describe a role performing a consequential job, not only an industry name.
+      placeholder: A risk analyst approves a high-value transfer.
+    validations:
+      required: true
+  - type: textarea
+    id: users
+    attributes:
+      label: Roles and decisions
+      description: Who acts, what do they decide, and what happens if the interface is wrong?
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk level
+      options: [Low, Moderate, High, Critical]
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Primary sources and domain reviewers
+      description: List stable primary sources and the expertise needed to review the pack.
+    validations:
+      required: true
+  - type: textarea
+    id: states
+    attributes:
+      label: Important edge states
+      description: Include stale, partial, offline, denied, uncertain, or other scenario-specific states.
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution readiness
+      options:
+        - label: I can help author or review this pack.
+        - label: I understand that a pack is not a professional certification.
+          required: true

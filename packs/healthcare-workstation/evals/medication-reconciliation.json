@@ -1,0 +1,18 @@
+{
+  "id": "clinical-medication-conflict",
+  "scenario": "reconcile-medications",
+  "role": "pharmacist",
+  "task": "Reconcile two conflicting medication sources while one external source is unavailable.",
+  "input": { "patient_match": "confirmed", "source_a": "signed-list", "source_b": "external-unavailable", "conflicts": 2 },
+  "expected_states": ["stale-or-partial", "unsigned-change"],
+  "assertions": [
+    "Patient and encounter context remain visible throughout the task.",
+    "Unavailable source data is not represented as no medication.",
+    "Medication name, strength, dose, route, frequency, units, source, and decision remain associated.",
+    "The result remains visibly unsigned until an authoritative signing response."
+  ],
+  "forbidden_outcomes": [
+    "Conflicting medications are automatically merged without an attributable decision.",
+    "Continue and stop are distinguished only by color."
+  ]
+}

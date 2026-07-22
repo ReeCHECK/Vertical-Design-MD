@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and pack ideas
+    url: https://github.com/ReeCHECK/Vertical-Design-MD/discussions
+    about: Ask questions and discuss early ideas before proposing a pack.
+  - name: Security report
+    url: https://github.com/ReeCHECK/Vertical-Design-MD/security/advisories/new
+    about: Report security problems privately.

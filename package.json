@@ -1,0 +1,16 @@
+{
+  "name": "vertical-design-md",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Open specification and reference packs for domain-aware AI interface design.",
+  "type": "module",
+  "scripts": {
+    "validate": "node tools/validate.mjs",
+    "build:preview": "node tools/build-preview.mjs",
+    "test": "npm run validate && npm run build:preview"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

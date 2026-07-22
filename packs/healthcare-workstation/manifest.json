@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/design-pack.schema.json",
+  "schema_version": "1.0",
+  "id": "healthcare-workstation",
+  "name": "Healthcare Clinical Workstation",
+  "version": "1.0.0",
+  "summary": "A safety-oriented clinical workspace for reviewing patient context, reconciling medications, and handing off work with explicit provenance.",
+  "domain": "clinical care coordination",
+  "risk_level": "critical",
+  "density": "adaptive",
+  "surfaces": ["web", "desktop", "tablet"],
+  "audiences": ["clinician", "nurse", "pharmacist", "care coordinator"],
+  "locales": ["en", "zh-CN"],
+  "accessibility_target": "WCAG 2.2 AA",
+  "required_documents": ["README.md", "DESIGN.md", "DOMAIN.md", "FLOWS.md", "STATES.md", "PERMISSIONS.md", "COMPLIANCE.md", "CONTENT.md"],
+  "coverage": {
+    "scenarios": ["confirm-patient-and-review-summary", "reconcile-medications", "clinical-handoff"],
+    "states": ["loading", "empty", "error", "permission-denied", "stale-or-partial", "offline-or-reconnecting", "identity-conflict", "unsigned-change"]
+  },
+  "provenance": [
+    {
+      "source_type": "primary",
+      "title": "W3C Web Content Accessibility Guidelines 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "reviewed_at": "2026-07-22",
+      "confidence": "high"
+    },
+    {
+      "source_type": "recommendation",
+      "title": "Vertical Design MD clinical interaction recommendations",
+      "url": "https://github.com/ReeCHECK/Vertical-Design-MD/blob/main/docs/specification.md",
+      "reviewed_at": "2026-07-22",
+      "confidence": "medium"
+    }
+  ]
+}

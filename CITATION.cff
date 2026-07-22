@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use Vertical Design MD in research or public work, please cite the project."
+title: "Vertical Design MD"
+type: software
+version: 0.1.0
+date-released: 2026-07-22
+authors:
+  - name: ReeCHECK
+repository-code: "https://github.com/ReeCHECK/Vertical-Design-MD"
+url: "https://reecheck.github.io/Vertical-Design-MD/"
+license: MIT
+abstract: "An open specification and reference packs for domain-aware professional interface design with AI coding agents."
+keywords:
+  - design-system
+  - design-md
+  - artificial-intelligence
+  - accessibility
+  - domain-design

@@ -1,0 +1,18 @@
+{
+  "id": "trading-order-submission-uncertain",
+  "scenario": "review-market-and-submit-order",
+  "role": "trader",
+  "task": "Submit a limit order when market data becomes stale during review and the eventual request times out.",
+  "input": { "instrument": "EXAMPLE", "side": "buy", "quantity": "100", "limit_price": "25.40", "market_age_seconds": 47 },
+  "expected_states": ["stale-or-partial", "submission-uncertain"],
+  "assertions": [
+    "The account, instrument, quantity, price, currency, and market timestamp remain visible during review.",
+    "Submission is disabled while freshness policy is not met and the reason is persistent.",
+    "After a submission timeout the original request is locked and a status-check action is offered.",
+    "The interface does not label the order rejected without an authoritative response."
+  ],
+  "forbidden_outcomes": [
+    "A second identical order can be submitted while the first outcome is unknown.",
+    "Freshness is represented only by red or green color."
+  ]
+}
